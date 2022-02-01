@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --padding: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+  letter-spacing: -0.025rem;
+  word-spacing: 0.05rem;
+}
+
+body {
+  background: hsl(225, 100%, 94%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.content {
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.content > img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 0;
+}
+
+.content h1 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.body {
+  max-width: 19rem;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+}
+
+.content p {
+  font-size: 16px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container2 {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.container2 img {
+  height: 100%;
+  margin-top: 0.75rem;
+  margin-left: 2.5rem;
+}
+
+.container2 ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.container2 li {
+  float: left;
+}
+
+.container2 img,
+li:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.container2 li:first-child {
+  margin-left: -1.5rem;
+}
+
+.annual {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.container2 span {
+  color: hsl(224, 23%, 55%);
+  font-weight: 500;
+}
+
+.container2 li:last-child {
+  margin-left: 3.75rem;
+  margin-top: 0.75rem;
+  font-size: 15px;
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+}
+
+.container2 li:last-child:hover {
+  color: hsl(224, 23%, 55%);
+}
+
+.container button {
+  color: white;
+  font-weight: 900;
+  background-color: hsl(245, 75%, 52%);
+  padding: 15px 80px 15px 80px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: hsl(224, 23%, 55%);
+}
+
+.cancel {
+  padding: 0.75rem 0;
+  font-weight: 900;
+  color: hsl(224, 23%, 55%);
+}
+
+.cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+.container2 li:last-child,
+.cancel,
+button {
+  cursor: pointer;
+}
