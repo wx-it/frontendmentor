@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+}
+
+.content svg {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.card1,
+.card2,
+.card3 {
+  padding: 1rem;
+  color: var(--Transparent-white);
+  width: 300px;
+}
+
+.card1 {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: var(--Bright-orange);
+}
+
+.card2 {
+  background-color: var(--Dark-cyan);
+}
+
+.card3 {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--Very-dark-cyan);
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 36px;
+  padding-left: 3rem;
+}
+
+.paragraph {
+  line-height: 2rem;
+  padding: 0rem 3rem 3rem 3rem;
+  width: 280px;
+}
+
+button {
+  border: none;
+  width: 130px;
+  height: 45px;
+  border-radius: 50px;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.first-btn {
+  color: var(--Bright-orange);
+}
+
+.second-btn {
+  color: var(--Dark-cyan);
+}
+
+.third-btn {
+  color: var(--Very-dark-cyan);
+}
+
+button:hover {
+  border: 2px white solid;
+  background-color: transparent;
+  color: white;
+}
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .card1,
+  .card3 {
+    border-radius: 0;
+  }
+
+  .card1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .card3 {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
