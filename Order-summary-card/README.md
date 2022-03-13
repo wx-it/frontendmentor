@@ -9,12 +9,13 @@ Live Site URL:(https://order-summary-pr.netlify.app)
 
 ### Built with
 
-HTML5
-CSS
-Flexbox
-Mobile-first workflow
+- HTML5
+- CSS
+- Flexbox
+- Mobile-first workflow
 
 ### Socials
 
-Frontend Mentor - wx-it
-Twitter - @wxit\_
+- Frontend Mentor - [wx-it](https://www.frontendmentor.io/profile/wx-it)
+- Twitter - [@wxit\_](https://twitter.com/wxit_)
+
