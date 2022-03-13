@@ -8,7 +8,7 @@ This is my solution for the QR code challenge [QR code component challenge on Fr
 
 ### Links
 
-- Solution URL:(https://github.com/wx-it/Qr-code)
+- Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/Qr-code)
 - Live Site URL:(https://wx-it.github.io/Qr-code/)
 
 ### Built with
