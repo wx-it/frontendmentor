@@ -4,8 +4,8 @@ This is my solution to the [Interactive rating component challenge on Frontend M
 
 ### Links
 
-Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/interactive-rating-component-main)
-Live Site URL:(https://interactive-component-main.netlify.app)
+- Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/interactive-rating-component-main)
+- Live Site URL:(https://interactive-component-main.netlify.app)
 
 ### Socials
 
