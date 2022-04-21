@@ -8,8 +8,8 @@ This is my solution for the QR code challenge [QR code component challenge on Fr
 
 ### Links
 
-- Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/Qr-code)
-- Live Site URL:(https://qr-code-wxit.netlify.app)
+- [Solution URL](https://github.com/wx-it/frontendmentor/tree/main/Qr-code)
+- [Live Site URL](https://qr-code-wxit.netlify.app)
 
 ### Built with
 

@@ -4,8 +4,8 @@ This is my solution for the Order summary card challenge on Frontend Mentor.
 
 ### Links
 
-Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/Order-summary-card)
-Live Site URL:(https://order-summary-pr.netlify.app)
+- [Solution URL](https://github.com/wx-it/frontendmentor/tree/main/Order-summary-card)
+- [Live Site URL](https://order-summary-pr.netlify.app)
 
 ### Built with
 
@@ -18,4 +18,3 @@ Live Site URL:(https://order-summary-pr.netlify.app)
 
 - Frontend Mentor - [wx-it](https://www.frontendmentor.io/profile/wx-it)
 - Twitter - [@wxit\_](https://twitter.com/wxit_)
-

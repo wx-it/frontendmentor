@@ -4,8 +4,8 @@ This is my solution to the [Blogr landing page challenge on Frontend Mentor](htt
 
 ### Links
 
-- Solution URL:(https://github.com/wx-it/frontendmentor/tree/main/interactive-rating-component-main)
-- Live Site URL:(https://interactive-component-main.netlify.app)
+- [Solution URL](https://github.com/wx-it/frontendmentor/tree/main/blogr-landing-page-main)
+- [Live Site URL](https://blogr-landing-page-wxit.netlify.app)
 
 ### Socials
 
