@@ -453,19 +453,6 @@ footer li:hover{
 }
 
 
-.attribution {
-    position: absolute;
-    bottom: 0;
-    font-size: 11px;
-    text-align: center;
-    color: wheat;
-    font-family: var(--overpass);
-
-}
-
-  .attribution a {
-    color: hsl(228, 78%, 73%);
-  }
 
   .mobile-img{
       display: none;
@@ -923,10 +910,6 @@ footer{
     display: block;
     margin: 0 auto;
 }
-
-
-
-
 
 .footer-content ul{
     font-family: var(--overpass);
