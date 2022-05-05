@@ -247,26 +247,28 @@
     position: relative;
     display: flex;
     font-family: var(--overpass);
-    margin-top: 5rem;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
     overflow: hidden;
+    padding: 18rem 0;
+
 
 }
 
 .s1-title{
+    margin-top: -5rem;
     text-align: center;
     font-size: 24px;
     color: var(--Very-dark-blue);
 }
 
 .s1-content{
+    margin: 10rem 0 0 0 ;
     display: flex;
     align-items: center;
     justify-content: flex-start; 
     position: relative;
-    padding: 18rem 0;
 }
 
 .s1-desktop-img{
@@ -746,35 +748,35 @@ footer li:hover{
         align-items: center;
         justify-content: center;
         font-family: var(--overpass);
-        margin-top: 15rem;
         overflow: visible;
+        padding: 0;
+        margin-top: 17rem;
     }
 
     .s1-title{
        position: relative;
        font-size: 16px;
        color: var(--Very-dark-blue);
-       margin-bottom: 2rem;
+       margin: 0;
+       z-index: 222;
     }
 
     .s1-content{
         position: relative;
         display: flex;
         flex-direction: column-reverse;
-        min-height: auto;
+        margin-top: -7rem;
     }
 
     .s1-mobile-img{
         position: relative;
-        margin-bottom: 1rem;
     }
 
     .s1-text{
         display: block;
-        margin: 0 auto;
+        margin: 1.5rem auto 0 auto;
         text-align: center;
         width: 275px;
-        margin-top: 1rem;
     }
 
     .s1-text p{
@@ -787,7 +789,6 @@ footer li:hover{
         color: var(--Very-dark-blue);
         font-size: 24px;
         font-weight: 600;
-        margin-bottom: 1rem;
     }
 
     .s1-text1{
@@ -865,11 +866,11 @@ footer li:hover{
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 50vh;
     align-items: center;
     justify-content: flex-end;
     font-family: var(--overpass);
-    margin-top: 12rem;
+    margin: 10rem;
 }
 
 .s3-text{
