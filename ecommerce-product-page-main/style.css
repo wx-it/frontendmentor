@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    /*PRIMARY*/
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+
+    /*NEUTRAL*/
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black-with-opacity-for-lightbox-background: hsl(0, 0%, 0%);
+
+    /*FONT-SIZE*/
+    --paragraph: 16px;
+}
+
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    margin: 0 5rem;
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding-bottom: 2rem;
+    padding: 0 auto;
+    border-bottom: 1px var(--Grayish-blue) solid;
+}
+
+.navbar > ul{
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+    gap: 1.5rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+.navbar > img:last-child{
+    width: 4rem;
+}
+
+.navbar button{
+    border: none;
+    background-color: transparent;
+    margin: 0 2rem;
+}
+
+/*PRODUCT*/
+.display-img img:nth-child(2), .display-img img:nth-child(3), .display-img img:nth-child(4){
+    display: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 7rem;
+    gap: 5rem;
+    border: 1px black solid;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+}
+
+.thumbnails{
+    display: flex;
+    margin: 1rem 0;
+}
+
+.thumbnails button{
+    border: none;
+    background-color: transparent;
+}
+
+.thumbnails img, .display-img img:nth-child(1){
+    width: 100%; 
+    border-radius: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.description h2{
+    color: var(--Orange);
+    font-size: 16px;
+}
+
+.description h1{
+    font-size: 42px;
+}
+
+.description p{
+    color: var(--Dark-grayish-blue);
+    font: var(--paragraph);
+    line-height: 1.5rem;
+}
+
+.description ul{
+    list-style-type: none;
+    margin-left: -3rem;
+
+}
+
+.description ul li:first-child{
+    font-weight: 700;
+    font-size: 24px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.description ul li:first-child > span{
+    color: var(--Orange);
+    font-size: 15px;
+    margin: 0 2rem;
+}
+
+.description ul > li:last-child{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
