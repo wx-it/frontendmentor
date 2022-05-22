@@ -285,7 +285,7 @@ body{
   }
 
   @media screen and (min-width: 700px) {
-    body{overflow: hidden;}
+    body{overflow-x: hidden;}
 
     .card{
       padding: 1rem 5rem;
