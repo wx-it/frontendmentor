@@ -1,6 +1,6 @@
 # Frontend Mentor - Blogr landing page
 
-This is my solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-qjLoleQ_Hx).
+This is my solution to the [Advice Generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub/advice-generator-qjLoleQ_Hx).
 
 ### Links
 
