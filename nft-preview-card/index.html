@@ -16,38 +16,36 @@
 
     <title>Frontend Mentor | NFT preview card component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
       <div class="container">
-        <img src="images/image-equilibrium.jpg" alt="Equilibrium" />
-        <h1>Equilibrium #3429</h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <div class="content_flex">
-          <p>0.041 ETH</p>
-          <p>3 days left</p>
+        <div class="container-content">
+          <div class="content-img">
+          <img src="images/image-equilibrium.jpg" alt="Equilibrium" />
+          </div>
+          <div class="container-text">
+            <h1>Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
         </div>
-        <div class="content_end">
-          <img src="images/image-avatar.png" alt="" />
-          <p>Creation of Jules Wyvern</p>
+        <ul class="content_flex">
+          <li> 0.041 ETH</li>
+          <li>3 days left</li>
+        </ul>
+          <div class="content_end">
+            <img src="images/image-avatar.png" alt="" />
+            <p>Creation of <span>Jules Wyvern</span></p>
+          </div>
         </div>
-      </div>
-    </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      </main>
     </div>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+          >. Coded by <a href="#">wx-it</a>.
+        </div>
+      </footer>
   </body>
 </html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+}
+
+*{
+    font-family: "Outfit", sans-serif;
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--main-bg);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1rem;
+}
+
+.container-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem ;
+    border-radius: 15px;
+    background-color: var(--card);
+    box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
+    0px 40px 30px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-img{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.content-img img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.content-img::after{
+    border-radius: 10px;
+    content: url(./images/icon-view.svg);
+    background-color: hsla(178, 100%, 50%, 0.5);;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+    height: 100%;
+}
+
+.content-img:hover::after{
+    opacity: 1;
+}
+
+.container-text{
+    width: 100%;
+}
+
+.container-text h1{
+    font-weight: 700;
+    color: white;
+    padding: 2rem 0;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.container-text > p{
+    color: var(--Soft-blue);
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 300px ;
+}
+
+.content_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 1rem;
+    border-bottom: 2px var(--line) solid;
+}
+
+.content_flex li:first-child{
+    list-style-image: url('images/icon-ethereum.svg');
+    color: var(--Cyan);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.content_flex li:last-child{
+    list-style-image: url('images/icon-clock.svg');
+    color: var(--Soft-blue);
+}
+
+.content_end{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.content_end img{
+    border: 1px white solid;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.content_end p {
+    margin: 0 2rem;
+    font-size: 18px;
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.content_end span{
+    color: white;
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Soft-blue);
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (hover: hover) { 
+.container-text h1:hover, .content_end span:hover{
+    color: var(--Cyan);
+}
+}
+
+
+@media  (min-width: 500px) {
+    .container-content{
+        max-width: 375px;
+    }
+}
