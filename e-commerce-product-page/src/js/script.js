@@ -25,6 +25,21 @@ function closeNav() {
 menuBtn.addEventListener('click', toggleNav);
 closeBtn.addEventListener('click', closeNav);
 
+//cart
+
+const cartBtn = document.getElementById('cart-btn');
+const cartToggle = document.getElementById('cart-toggle');
+
+function toggleCart(){
+    const toggle = cartToggle.getAttribute('data-toggle');
+    if(toggle == true){
+        cartToggle.setAttribute('data-toggle', false);
+    } else{
+        cartToggle.setAttribute('data-toggle', true);
+    }   
+}
+
+cartBtn.addEventListener('click', toggleCart)
 
 //images slide
 const previous = document.getElementById('previous');

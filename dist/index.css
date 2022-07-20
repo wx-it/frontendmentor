@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Primary */
+/* Neutral */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 1rem 0;
+}
+.container__navbar .start, .container__navbar .end {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container__navbar .start {
+  width: 50%;
+}
+.container__navbar .start > img:last-child {
+  width: 70%;
+  margin-top: -0.5rem;
+}
+.container__navbar .start button {
+  background-color: transparent;
+  border: none;
+}
+.container__navbar .start button img {
+  width: 100%;
+}
+.container__navbar .end button {
+  border: none;
+  background-color: transparent;
+}
+.container__navbar .end > img:last-child {
+  width: 20%;
+}
+.container .cart-toggle {
+  position: absolute;
+  margin: 0 auto;
+  top: 5rem;
+  left: 0rem;
+  right: 0rem;
+  width: 350px;
+  height: 300px;
+  background-color: white;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+.container .cart-toggle h3 {
+  padding: 1.5rem;
+  border-bottom: 1px hsl(220deg, 14%, 75%) solid;
+}
+.container .cart-toggle p {
+  text-align: center;
+  margin: 7rem 0;
+  font-weight: 700;
+  color: hsl(219deg, 9%, 45%);
+}
+.container .cart-toggle[data-toggle=true] {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: auto;
+}
+.container .nav-toggle {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 10rem 0 2.5rem;
+  background-color: white;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: all 0.7s ease-in-out;
+}
+.container .nav-toggle button {
+  border: none;
+  background-color: transparent;
+}
+.container .nav-toggle button img {
+  position: absolute;
+  top: 1.25rem;
+  left: 2.25rem;
+}
+.container .nav-toggle a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+.container .nav-toggle[data-visible=true] {
+  transform: translateX(0%);
+}
+.container .images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 375px;
+}
+.container .images .product {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  z-index: -1;
+}
+.container .images__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 1rem;
+}
+.container .images__buttons button {
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 0 0.7rem;
+}
+.container .images__buttons button img {
+  width: 10px;
+  height: 13px;
+  margin-top: 0.1rem;
+}
+.container .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.container .description h3 {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+.container .description h1 {
+  color: hsl(220deg, 13%, 13%);
+  margin: 1rem 0;
+}
+.container .description p {
+  color: hsl(219deg, 9%, 45%);
+  line-height: 1.75rem;
+}
+.container .pricing {
+  margin: 0 2rem;
+}
+.container .pricing ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.container .pricing ul .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+.container .pricing ul .left li:first-child {
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(220deg, 13%, 13%);
+}
+.container .pricing ul .left li:last-child {
+  color: hsl(26deg, 100%, 55%);
+  font-weight: 700;
+  font-size: 15px;
+  background-color: hsl(25deg, 100%, 94%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+}
+.container .pricing ul .right li {
+  text-decoration: line-through;
+  font-weight: 700;
+  color: hsl(220deg, 14%, 75%);
+}
+.container .inc-dec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 3rem;
+}
+.container .inc-dec p {
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+  font-size: 16px;
+}
+.container .inc-dec button {
+  border: none;
+  background-color: transparent;
+}
+.container .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.container .cart button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(26deg, 100%, 55%);
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  margin: 0 2rem;
+  padding: 1.25rem 0;
+}
+.container .cart button p {
+  margin: 0 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0px 5px 10px hsl(26deg, 100%, 55%);
+}/*# sourceMappingURL=index.css.map */
