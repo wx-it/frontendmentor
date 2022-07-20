@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="container__navbar">
+            <div class="start">
+              <button id="menu-btn">
+                <img src="images/icon-menu.svg" alt="" />
+              </button>
+              <img src="images/logo.svg" alt="" />
+            </div>
+            <div class="end">
+              <img src="images/icon-cart.svg" alt="" />
+              <img src="images/image-avatar.png" alt="" />
+            </div>
+          </div>
+
+          <div class="nav-toggle" id="nav-toggle" data-visible="false">
+            <button id="close-btn">
+              <img src="images/icon-close.svg" alt="" />
+            </button>
+            <a href="">Collections</a>
+            <a href="">Men</a>
+            <a href="">Women</a>
+            <a href="">About</a>
+            <a href=""> Contact </a>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <div class="images">
+          <div class="images__buttons">
+            <button id="previous" class="previous">
+              <img src="images/icon-previous.svg" alt="" />
+            </button>
+            <button id="next" class="next">
+              <img src="images/icon-next.svg" alt="" />
+            </button>
+          </div>
+          <img class="product" src="images/image-product-1.jpg" alt="" />
+          <img class="product" src="images/image-product-2.jpg" alt="" />
+          <img class="product" src="images/image-product-3.jpg" alt="" />
+          <img class="product" src="images/image-product-4.jpg" alt="" />
+        </div>
+
+        <div class="description">
+          <h3>Sneaker Company</h3>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+
+        <div class="pricing">
+          <ul>
+            <div class="left">
+              <li>$125.00</li>
+              <li>50%</li>
+            </div>
+            <div class="right">
+              <li>$250.00</li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="inc-dec">
+          <button id="dec">
+            <img src="images/icon-minus.svg" alt="" />
+          </button>
+          <p id="num"></p>
+          <button id="inc">
+            <img src="images/icon-plus.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="cart">
+          <button>
+            <img src="images/icon-cart-white.svg" alt="" />
+            <p>Add to cart</p>
+          </button>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+    <script src="/src/js/script.js"></script>
+  </body>
+</html>
