@@ -7,7 +7,10 @@
 }
 
 /* Primary */
-/* Neutral *//*# sourceMappingURL=index.css.map */ify-content: center;
+/* Neutral */
+.container {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -182,22 +185,28 @@
 .container .images {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  height: 375px;
+  width: 100vw;
 }
 .container .images .product {
-  position: absolute;
-  width: 100%;
-  inset: 0;
-  z-index: -1;
+  width: 100vw;
+}
+.container .images .prev-transform {
+  transform: translateX(375px);
+  transition: all 0.7s ease-in-out;
+}
+.container .images .next-transform {
+  transform: translateX(-375px);
+  transition: all 0.7s ease-in-out;
 }
 .container .images__buttons {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0 1rem;
+  margin: 0rem;
 }
 .container .images__buttons button {
   background-color: white;
@@ -206,6 +215,7 @@
   width: 30px;
   height: 30px;
   padding: 0 0.7rem;
+  z-index: 1;
 }
 .container .images__buttons button img {
   width: 10px;

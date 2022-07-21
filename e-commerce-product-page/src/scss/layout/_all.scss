@@ -223,24 +223,36 @@
     .images{
         position: relative;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        height: 375px;
+        width: 100vw;
+        
 
-        .product{
-            position: absolute;
-            width: 100%;
-            inset: 0;
-            z-index: -1;
+            
+            .product{
+                width: 100vw;
+            }
+
+        .prev-transform{
+            transform: translateX(375px);
+            transition: all 0.7s ease-in-out;
         }
 
+        .next-transform{
+            transform: translateX(-375px);
+            transition: all 0.7s ease-in-out;
+        }
+
+        
+
         &__buttons{
+            position: absolute;
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            margin: 0 1rem;
-
+            margin: 0rem;
+            
             button{
                 background-color: white;
                 border: none;
@@ -248,6 +260,8 @@
                 width: 30px;
                 height: 30px;
                 padding: 0 .7rem;
+                z-index: 1;
+
 
                 img{
                     width: 10px;

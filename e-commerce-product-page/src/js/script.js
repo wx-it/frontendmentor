@@ -44,6 +44,23 @@ cartBtn.addEventListener('click', toggleCart)
 //images slide
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
+const products = document.querySelectorAll('#img-display');
+console.log(products)
+function nextImage() {
+    products.forEach((img)=>{
+     img.style.transform='translatex(100%)';
+    })
+}
+next.addEventListener('click', nextImage)
+
+
+
+function prevImage() {
+    products.forEach((img)=>{
+        img.style.transform='translatex(-100%)';
+  })
+}
+previous.addEventListener('click', prevImage)
 
 
 
@@ -108,7 +125,6 @@ function incrementCart() {
         fullCart.style.display="flex";
     }
 }
-
 
 addCart.addEventListener('click', incrementCart)
 
