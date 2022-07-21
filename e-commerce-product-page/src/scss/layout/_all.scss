@@ -40,8 +40,22 @@
 
         .end{
             button{
+                position: relative;
                 border: none;
                 background-color: transparent;
+
+                .number{
+                    display: block;
+                    position: absolute;
+                    top: -.6rem;
+                    right: -.75rem;
+                    padding: 0.1rem .65rem;
+                    border-radius: 30px;
+                    background-color: c.$Orange;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 10px;
+                }
             }
 
             > img:last-child{

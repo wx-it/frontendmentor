@@ -15,7 +15,7 @@ function toggleNav(){
 
 function closeNav() {
     const visible = navbar.getAttribute('data-visible');
-    if(visible == 'true'){
+    if(visible == true){
         navbar.setAttribute('data-visible', true);
     } else{
         navbar.setAttribute('data-visible', false);
@@ -75,3 +75,24 @@ function decrement() {
 }
 
 dec.addEventListener('click', decrement);
+
+
+//add items to cart 
+
+const addCart = document.getElementById('add-cart');
+const n = document.getElementById('n');
+
+n.style.display='none';
+
+function incrementCart() {
+    if(n.textContent = count){
+        n.style.display='block';
+    }
+    if(n.textContent == 0){
+        n.style.display='none';
+    }
+}
+
+addCart.addEventListener('click', incrementCart)
+
+

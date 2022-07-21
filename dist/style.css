@@ -42,8 +42,21 @@
   width: 100%;
 }
 .container__navbar .end button {
+  position: relative;
   border: none;
   background-color: transparent;
+}
+.container__navbar .end button .number {
+  display: block;
+  position: absolute;
+  top: -0.6rem;
+  right: -0.75rem;
+  padding: 0.1rem 0.65rem;
+  border-radius: 30px;
+  background-color: hsl(26deg, 100%, 55%);
+  color: white;
+  font-weight: 700;
+  font-size: 10px;
 }
 .container__navbar .end > img:last-child {
   width: 20%;
