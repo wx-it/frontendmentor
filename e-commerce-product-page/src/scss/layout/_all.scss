@@ -73,6 +73,8 @@
         left: 0rem;
         right: 0rem;
         width: 350px;
+        height: 250px;
+
         background-color: white;
         z-index: 2;
         border-radius: 10px;
@@ -87,16 +89,17 @@
             border-bottom: 1px c.$Grayish-blue solid;
         }
         .empty-cart{
+            display: block;
             p{
                 text-align: center;
-                margin: 7rem 0;
+                margin: 5.5rem 0;
                 font-weight: 700;
                 color: c.$Dark-grayish-blue;
             }
         }
 
         .full-cart{
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             flex-direction: column;

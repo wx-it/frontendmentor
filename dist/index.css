@@ -7,10 +7,7 @@
 }
 
 /* Primary */
-/* Neutral */
-.container {
-  display: flex;
-  justify-content: center;
+/* Neutral *//*# sourceMappingURL=index.css.map */ify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
@@ -68,6 +65,7 @@
   left: 0rem;
   right: 0rem;
   width: 350px;
+  height: 250px;
   background-color: white;
   z-index: 2;
   border-radius: 10px;
@@ -80,14 +78,17 @@
   padding: 1.5rem;
   border-bottom: 1px hsl(220deg, 14%, 75%) solid;
 }
+.container .cart-toggle .empty-cart {
+  display: block;
+}
 .container .cart-toggle .empty-cart p {
   text-align: center;
-  margin: 7rem 0;
+  margin: 5.5rem 0;
   font-weight: 700;
   color: hsl(219deg, 9%, 45%);
 }
 .container .cart-toggle .full-cart {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;

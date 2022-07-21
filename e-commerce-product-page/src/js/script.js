@@ -81,6 +81,11 @@ dec.addEventListener('click', decrement);
 
 const addCart = document.getElementById('add-cart');
 const n = document.getElementById('n');
+const multiply = document.getElementById('multiply');
+const output = document.getElementById('output');
+const emptyCart = document.getElementById('empty-cart');
+const fullCart = document.getElementById('full-cart');
+
 
 n.style.display='none';
 
@@ -91,8 +96,34 @@ function incrementCart() {
     if(n.textContent == 0){
         n.style.display='none';
     }
+
+    multiply.textContent = count;
+    output.textContent = count * 125;
+
+
+    if(count == 0 ){
+        fullCart.style.display="none";
+    } else if(count > 0){
+        emptyCart.style.display="none";
+        fullCart.style.display="flex";
+    }
 }
 
+
 addCart.addEventListener('click', incrementCart)
+
+//delete cart from checkout
+
+const deleteBtn = document.getElementById('delete');
+
+function deleteCart() {
+    setTimeout(() => {
+        fullCart.style.display="none";
+        emptyCart.style.display="block";
+        n.style.display='none';
+    }, 500);
+}
+
+deleteBtn.addEventListener('click', deleteCart)
 
 
