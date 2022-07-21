@@ -73,7 +73,6 @@
         left: 0rem;
         right: 0rem;
         width: 350px;
-        height: 300px;
         background-color: white;
         z-index: 2;
         border-radius: 10px;
@@ -87,12 +86,88 @@
             padding: 1.5rem;
             border-bottom: 1px c.$Grayish-blue solid;
         }
-        p{
-            text-align: center;
-            margin: 7rem 0;
-            font-weight: 700;
-            color: c.$Dark-grayish-blue;
+        .empty-cart{
+            p{
+                text-align: center;
+                margin: 7rem 0;
+                font-weight: 700;
+                color: c.$Dark-grayish-blue;
+            }
         }
+
+        .full-cart{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 1.5rem 2rem;
+
+            .row{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                h5{
+                    color: c.$Dark-grayish-blue;
+                    font-weight: 400;
+                    font-size: 13px;
+                }
+
+
+                img:first-child{
+                    width: 20%;
+                    border-radius: 5px;
+                }
+    
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                }
+    
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    margin-top: 0.5rem;
+
+    
+                    li:first-child{
+                        color: c.$Dark-grayish-blue;
+                    }
+    
+                    li:last-child{
+                         font-weight: 700;
+                         margin: 0 .5rem;
+                    }
+                }
+
+                .delete{
+                    border: none;
+                    background-color: transparent;
+
+                    img{
+                      width: 100%;   
+                    }
+                }
+            }
+
+            .checkout{
+                background-color: c.$Orange;
+                border: none;
+                border-radius: 10px;
+                margin: 0 2rem;
+                padding: 1.25rem 0;
+                color: white;
+                font-weight: 700;
+                font-size: 15px;
+                width: 100%;
+                margin-top: 2rem;
+    
+            }
+
+        }
+
+
     }
     
     .cart-toggle[data-toggle = "true"] {
