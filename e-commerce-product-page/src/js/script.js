@@ -6,7 +6,7 @@ const closeBtn = document.getElementById('close-btn');
 
 function toggleNav(){
     const visible = navbar.getAttribute('data-visible');
-    if(visible == true){
+    if(visible == 'true'){
         navbar.setAttribute('data-visible', false);
     } else{
         navbar.setAttribute('data-visible', true);
@@ -15,7 +15,7 @@ function toggleNav(){
 
 function closeNav() {
     const visible = navbar.getAttribute('data-visible');
-    if(visible == true){
+    if(visible == 'true'){
         navbar.setAttribute('data-visible', true);
     } else{
         navbar.setAttribute('data-visible', false);
@@ -32,7 +32,7 @@ const cartToggle = document.getElementById('cart-toggle');
 
 function toggleCart(){
     const toggle = cartToggle.getAttribute('data-toggle');
-    if(toggle == true){
+    if(toggle == 'true'){
         cartToggle.setAttribute('data-toggle', false);
     } else{
         cartToggle.setAttribute('data-toggle', true);
