@@ -339,6 +339,10 @@
   background-size: cover;
   border-radius: 10px;
 }
+.container .animation {
+  -webkit-animation: slide 3s;
+          animation: slide 3s;
+}
 .container .images {
   position: relative;
   display: flex;
@@ -349,6 +353,22 @@
 @media (min-width: 43.75em) {
   .container .images {
     display: none;
+  }
+}
+@-webkit-keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 .container .images .product {

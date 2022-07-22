@@ -383,15 +383,29 @@
 
     }
 
+    .animation{
+        animation: slide 3s;
+    }
+
     .images{
         position: relative;
         display: flex;
         justify-content: start;
         align-items: center;
         width: 100vw;
+
         
         @include c.breakpoints(desktop) {
             display: none;
+        }
+
+        @keyframes slide {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-100%);
+            }
         }
             
             .product{

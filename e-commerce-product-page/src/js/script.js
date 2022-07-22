@@ -44,12 +44,10 @@ cartBtn.addEventListener('click', toggleCart)
 //images slide
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
-const products = document.querySelectorAll('#img-display');
+const products = document.querySelector('#img-display');
 //console.log(products)
 function nextImage() {
-    products.forEach((img)=>{
-     img.style.transform='translatex(100%)';
-    })
+        products.classList.add('animation');
 }
 next.addEventListener('click', nextImage)
 
