@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -13,7 +12,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
 }
 .container__navbar {
   display: flex;
@@ -24,8 +22,10 @@
 }
 @media (min-width: 43.75em) {
   .container__navbar {
-    min-width: 100%;
-    padding: 0rem 2rem 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
     border-bottom: 1px hsl(220deg, 14%, 75%) solid;
   }
 }
@@ -33,6 +33,13 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+@media (min-width: 43.75em) {
+  .container__navbar .start, .container__navbar .end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .container__navbar .links {
   display: none;
@@ -68,6 +75,9 @@
 .container__navbar .start button img {
   width: 100%;
 }
+.container__navbar .end {
+  position: relative;
+}
 .container__navbar .end button {
   position: relative;
   border: none;
@@ -76,7 +86,7 @@
 .container__navbar .end button .number {
   display: block;
   position: absolute;
-  top: -0.6rem;
+  top: -1.25rem;
   right: -0.75rem;
   padding: 0.1rem 0.65rem;
   border-radius: 30px;
@@ -86,7 +96,12 @@
   font-size: 10px;
 }
 .container__navbar .end > img:last-child {
-  width: 40%;
+  width: 20%;
+}
+@media (min-width: 43.75em) {
+  .container__navbar .end > img:last-child {
+    width: 40%;
+  }
 }
 .container .cart-toggle {
   position: absolute;
@@ -95,7 +110,6 @@
   left: 0rem;
   right: 0rem;
   width: 350px;
-  height: 250px;
   background-color: white;
   z-index: 2;
   border-radius: 10px;
@@ -104,8 +118,17 @@
   opacity: 0;
   transition: all 150ms ease-in-out;
 }
+@media (min-width: 43.75em) {
+  .container .cart-toggle {
+    position: absolute;
+    margin: 0;
+    right: 2rem;
+    top: 6.5rem;
+    left: auto;
+  }
+}
 .container .cart-toggle h3 {
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px hsl(220deg, 14%, 75%) solid;
 }
 .container .cart-toggle .empty-cart {
@@ -146,7 +169,6 @@
 .container .cart-toggle .full-cart .row ul {
   list-style-type: none;
   display: flex;
-  margin-top: 0.5rem;
 }
 .container .cart-toggle .full-cart .row ul li:first-child {
   color: hsl(219deg, 9%, 45%);
@@ -214,6 +236,66 @@
 .container .nav-toggle[data-visible=true] {
   transform: translateX(0%);
 }
+@media (min-width: 43.75em) {
+  .container main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+}
+@media (min-width: 43.75em) {
+  .container main .main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.container main .desktop-images {
+  display: none;
+}
+@media (min-width: 43.75em) {
+  .container main .desktop-images {
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 43.75em) {
+  .container main .desktop-images .images-display img {
+    width: 450px;
+    border-radius: 10px;
+  }
+}
+.container main .desktop-images .images-buttons {
+  display: none;
+}
+@media (min-width: 43.75em) {
+  .container main .desktop-images .images-buttons {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.container main .desktop-images .images-buttons button {
+  width: 100px;
+  background: transparent;
+  border: none;
+}
+.container main .desktop-images .images-buttons button img:hover {
+  border: 2px hsl(26deg, 100%, 55%) solid;
+}
+.container main .desktop-images .images-buttons button img {
+  width: 100px;
+  border-radius: 10px;
+}
 .container .images {
   position: relative;
   display: flex;
@@ -228,14 +310,6 @@
 }
 .container .images .product {
   width: 100vw;
-}
-.container .images .prev-transform {
-  transform: translateX(375px);
-  transition: all 0.7s ease-in-out;
-}
-.container .images .next-transform {
-  transform: translateX(-375px);
-  transition: all 0.7s ease-in-out;
 }
 .container .images__buttons {
   position: absolute;
@@ -265,6 +339,11 @@
   flex-direction: column;
   padding: 2rem;
 }
+@media (min-width: 43.75em) {
+  .container .description {
+    padding: 0;
+  }
+}
 .container .description h3 {
   color: hsl(26deg, 100%, 55%);
   font-weight: 700;
@@ -276,12 +355,28 @@
   color: hsl(220deg, 13%, 13%);
   margin: 1rem 0;
 }
+@media (min-width: 43.75em) {
+  .container .description h1 {
+    font-size: 40px;
+    width: 400px;
+  }
+}
 .container .description p {
   color: hsl(219deg, 9%, 45%);
   line-height: 1.75rem;
 }
+@media (min-width: 43.75em) {
+  .container .description p {
+    width: 400px;
+  }
+}
 .container .pricing {
   margin: 0 2rem;
+}
+@media (min-width: 43.75em) {
+  .container .pricing {
+    margin: 0;
+  }
 }
 .container .pricing ul {
   display: flex;
@@ -289,11 +384,24 @@
   align-items: center;
   list-style-type: none;
 }
+@media (min-width: 43.75em) {
+  .container .pricing ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
 .container .pricing ul .left {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 50%;
+}
+@media (min-width: 43.75em) {
+  .container .pricing ul .left {
+    align-items: center;
+    justify-content: start;
+  }
 }
 .container .pricing ul .left li:first-child {
   font-weight: 700;
@@ -313,11 +421,28 @@
   font-weight: 700;
   color: hsl(220deg, 14%, 75%);
 }
+@media (min-width: 43.75em) {
+  .container .desktop-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+  }
+}
 .container .inc-dec {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2rem 3rem;
+}
+@media (min-width: 43.75em) {
+  .container .inc-dec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    margin: 0;
+  }
 }
 .container .inc-dec p {
   font-weight: 700;
@@ -334,6 +459,11 @@
   align-items: center;
   width: 100vw;
 }
+@media (min-width: 43.75em) {
+  .container .cart {
+    width: 100%;
+  }
+}
 .container .cart button {
   display: flex;
   align-items: center;
@@ -343,7 +473,7 @@
   border: none;
   border-radius: 10px;
   margin: 0 2rem;
-  padding: 1.25rem 0;
+  padding: 1.25rem 0rem;
 }
 .container .cart button p {
   margin: 0 1rem;

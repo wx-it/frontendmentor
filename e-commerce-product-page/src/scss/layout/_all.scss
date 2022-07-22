@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
 
     &__navbar{
         display: flex;
@@ -14,8 +13,10 @@
         width: 100vw;
         padding: 1rem 0;
         @include c.breakpoints(desktop) {
-            min-width: 100%;
-            padding: 0rem 2rem 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
             border-bottom: 1px c.$Grayish-blue solid;
         }
         
@@ -23,7 +24,11 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
-            
+        @include c.breakpoints(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
         }
 
 
@@ -66,6 +71,7 @@
         }
 
         .end{
+            position: relative;
             button{
                 position: relative;
                 border: none;
@@ -74,7 +80,7 @@
                 .number{
                     display: block;
                     position: absolute;
-                    top: -.6rem;
+                    top: -1.25rem;
                     right: -.75rem;
                     padding: 0.1rem .65rem;
                     border-radius: 30px;
@@ -86,7 +92,10 @@
             }
 
             > img:last-child{
+                width: 20%;
+               @include c.breakpoints(desktop) {
                 width: 40%;
+               }
             }
         }
     
@@ -100,8 +109,6 @@
         left: 0rem;
         right: 0rem;
         width: 350px;
-        height: 250px;
-
         background-color: white;
         z-index: 2;
         border-radius: 10px;
@@ -109,10 +116,16 @@
         transform: translateY(-10px);
         opacity: 0;
         transition: all 150ms ease-in-out;
-      
+        @include c.breakpoints(desktop) {
+            position: absolute;
+            margin: 0;
+            right: 2rem;
+            top: 6.5rem;
+            left: auto;
+        }
 
         h3{
-            padding: 1.5rem;
+            padding: 1rem 1.5rem;
             border-bottom: 1px c.$Grayish-blue solid;
         }
         .empty-cart{
@@ -158,8 +171,6 @@
                 ul{
                     list-style-type: none;
                     display: flex;
-                    margin-top: 0.5rem;
-
     
                     li:first-child{
                         color: c.$Dark-grayish-blue;
@@ -250,6 +261,80 @@
         transform: translateX(0%);
     }
 
+
+    main{
+        @include c.breakpoints(desktop) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .main-content{
+            @include c.breakpoints(desktop) {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+
+            }
+        }
+
+
+        .desktop-images{
+            display: none;
+            @include c.breakpoints(desktop) {
+                margin-top: 5rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+    
+            }
+            
+            .images-display{
+                img{
+                    @include c.breakpoints(desktop) {
+                        width: 450px;
+                        border-radius: 10px;
+                    }
+                }
+                }
+
+                .images-buttons{
+                    display: none;
+                    @include c.breakpoints(desktop) {
+                        width: 450px;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    
+
+                    button{
+                        width: 100px;
+                        background: transparent;
+                        border: none;
+
+                        img:hover{
+                            border: 2px c.$Orange solid;
+                            
+                        }
+
+                        img{
+                        width: 100px;
+                        border-radius: 10px;
+                        }
+                    }
+                }
+
+        }
+
+    }
+
     .images{
         position: relative;
         display: flex;
@@ -264,18 +349,6 @@
             .product{
                 width: 100vw;
             }
-
-        .prev-transform{
-            transform: translateX(375px);
-            transition: all 0.7s ease-in-out;
-        }
-
-        .next-transform{
-            transform: translateX(-375px);
-            transition: all 0.7s ease-in-out;
-        }
-
-        
 
         &__buttons{
             position: absolute;
@@ -310,7 +383,9 @@
         justify-content: center;
         flex-direction: column;
         padding: 2rem;
-
+        @include c.breakpoints(desktop) {
+            padding: 0;
+        }
         h3{
             color: c.$Orange;
             font-weight: 700;
@@ -322,28 +397,50 @@
         h1{
             color: c.$Very-dark-blue;
             margin: 1rem 0;
+
+        @include c.breakpoints(desktop) {
+            font-size: 40px;
+            width: 400px;
+
+        }
+
         }
 
         p{
             color: c.$Dark-grayish-blue;
             line-height: 1.75rem;
+        @include c.breakpoints(desktop) {
+            width: 400px;
+        }
         }
     }
 
 
     .pricing{
         margin: 0 2rem;
+        @include c.breakpoints(desktop) {
+            margin: 0;
+        }
+
         ul{
             display: flex;
             justify-content: space-between;
             align-items: center;
             list-style-type: none;
-
+            @include c.breakpoints(desktop) {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+            }
             .left{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 50%;
+                @include c.breakpoints(desktop) {
+                    align-items: center;
+                    justify-content: start;
+                }
 
                 li{
                     &:first-child{
@@ -373,12 +470,28 @@
         }
     }
 
+    .desktop-row{
+        @include c.breakpoints(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 70%;
+        }
+
+    }
+
     .inc-dec{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 2rem 3rem;
-
+        @include c.breakpoints(desktop) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 30%;
+            margin: 0;
+        }
         p{
             font-weight: 700;
             color: c.$Very-dark-blue;
@@ -396,6 +509,9 @@
         justify-content: center;
         align-items: center;
         width: 100vw;
+        @include c.breakpoints(desktop) {
+            width: 100%;
+        }
         
         button{
             display: flex;
@@ -406,7 +522,7 @@
             border: none;
             border-radius: 10px;
             margin: 0 2rem;
-            padding: 1.25rem 0;
+            padding: 1.25rem 0rem;
 
             p{
                 margin: 0 1rem;
