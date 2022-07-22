@@ -6,13 +6,18 @@
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    
+
     &__navbar{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100vw;
         padding: 1rem 0;
+        @include c.breakpoints(desktop) {
+            min-width: 100%;
+            padding: 0rem 2rem 1.5rem 2rem;
+            border-bottom: 1px c.$Grayish-blue solid;
+        }
         
         .start, .end{
             display: flex;
@@ -20,17 +25,39 @@
             justify-content: space-evenly;
             
         }
+
+
+        .links{
+            display: none;
+
+            @include c.breakpoints(desktop) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a{
+                    text-decoration: none;
+                    margin: 0 1rem;
+                    color: c.$Dark-grayish-blue;
+                }
+           }
+        }
+
         .start{
             width: 50%;
             
              >img:last-child{
-               width: 70%;
+               width: 30%;
                margin-top: -0.5rem;
            }
            
              button{
                background-color: transparent;
                border: none;
+               @include c.breakpoints(desktop) {
+                display: none;
+           }
+               
            }
            
             button img{
@@ -59,7 +86,7 @@
             }
 
             > img:last-child{
-                width: 20%;
+                width: 40%;
             }
         }
     
@@ -192,6 +219,9 @@
         z-index: 2;
         transform: translateX(-100%);
         transition: all .7s ease-in-out;
+        @include c.breakpoints(desktop) {
+             display: none;
+        }
 
         button{
             border: none;
@@ -227,7 +257,9 @@
         align-items: center;
         width: 100vw;
         
-
+        @include c.breakpoints(desktop) {
+            display: none;
+        }
             
             .product{
                 width: 100vw;
