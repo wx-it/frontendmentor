@@ -45,7 +45,7 @@ cartBtn.addEventListener('click', toggleCart)
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
 const products = document.querySelectorAll('#img-display');
-console.log(products)
+//console.log(products)
 function nextImage() {
     products.forEach((img)=>{
      img.style.transform='translatex(100%)';
@@ -143,3 +143,53 @@ function deleteCart() {
 deleteBtn.addEventListener('click', deleteCart)
 
 
+//display image on desktop
+
+
+//images
+const firstImg = document.getElementById('first-img');
+const secondImg = document.getElementById('second-img');
+const thirdImg = document.getElementById('third-img');
+const fourthImg = document.getElementById('fourth-img');
+
+//buttons
+const firstBtn = document.getElementById('first-btn');
+const secondBtn = document.getElementById('second-btn');
+const thirdBtn = document.getElementById('third-btn');
+const fourthBtn = document.getElementById('fourth-btn');
+
+function firstImgDisplay() {
+    firstImg.style.display="block";
+    secondImg.style.display="none";
+    thirdImg.style.display="none";
+    fourthImg.style.display="none";    
+}
+
+firstBtn.addEventListener('click', firstImgDisplay);
+
+function secondImgDisplay() {
+    firstImg.style.display="none";
+    secondImg.style.display="block";
+    thirdImg.style.display="none";
+    fourthImg.style.display="none";
+}
+
+secondBtn.addEventListener('click', secondImgDisplay);
+
+function thirdImgDisplay() {
+    firstImg.style.display="none";
+    secondImg.style.display="none";
+    thirdImg.style.display="block";
+    fourthImg.style.display="none";
+}
+
+thirdBtn.addEventListener('click', thirdImgDisplay);
+
+function fourthImgDisplay() {
+    firstImg.style.display="none";
+    secondImg.style.display="none";
+    thirdImg.style.display="none";
+    fourthImg.style.display="block";
+}
+
+fourthBtn.addEventListener('click', fourthImgDisplay);

@@ -274,6 +274,9 @@
     border-radius: 10px;
   }
 }
+.container main .desktop-images .second, .container main .desktop-images .third, .container main .desktop-images .fourth {
+  display: none;
+}
 .container main .desktop-images .images-buttons {
   display: none;
 }

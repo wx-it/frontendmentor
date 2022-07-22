@@ -304,6 +304,9 @@
                     }
                 }
                 }
+                .second, .third, .fourth{
+                    display: none;
+                }
 
                 .images-buttons{
                     display: none;
@@ -320,8 +323,7 @@
                         border: none;
 
                         img:hover{
-                            border: 2px c.$Orange solid;
-                            
+                            border: 2px c.$Orange solid;   
                         }
 
                         img{
