@@ -12,11 +12,13 @@
         justify-content: space-between;
         width: 100vw;
         padding: 1rem 0;
+
         @include c.breakpoints(desktop) {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 90vw;
+            padding: 0;
             border-bottom: 1px c.$Grayish-blue solid;
         }
         
@@ -39,11 +41,21 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 60%;
 
                 a{
                     text-decoration: none;
                     margin: 0 1rem;
                     color: c.$Dark-grayish-blue;
+                    padding: 37px 0;
+                    height: 100%;
+                    transition: all .15s ease;
+                    border-bottom: 3px solid hsl(0, 0%, 100%);
+                    
+                    &:hover{
+                        color: black;
+                          border-bottom: 3px solid hsl(26, 100%, 55%);
+                    }
                 }
            }
         }
@@ -76,6 +88,8 @@
                 position: relative;
                 border: none;
                 background-color: transparent;
+               cursor: pointer;
+
 
                 .number{
                     display: block;
@@ -95,6 +109,11 @@
                 width: 20%;
                @include c.breakpoints(desktop) {
                 width: 40%;
+                cursor: pointer;
+                &:hover{
+                    border: 2px c.$Orange solid;
+                    border-radius: 50%;
+                }
                }
             }
         }
@@ -116,6 +135,7 @@
         transform: translateY(-10px);
         opacity: 0;
         transition: all 150ms ease-in-out;
+       
         @include c.breakpoints(desktop) {
             position: absolute;
             margin: 0;
@@ -319,17 +339,43 @@
 
                     button{
                         width: 100px;
-                        background: transparent;
+                        height: 100px;
                         border: none;
-
-                        img:hover{
-                            border: 2px c.$Orange solid;   
+                        &:hover, &:focus{
+                            border: 2px c.$Orange solid;
+                            opacity: 70%;   
                         }
-
                         img{
-                        width: 100px;
-                        border-radius: 10px;
+                            width: 100px;
                         }
+                    }
+                    
+                    .first-btn{
+                        background-image: url(/e-commerce-product-page/images/image-product-1-thumbnail.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 10px;
+                    }
+
+                    .second-btn{
+                        background-image: url(/e-commerce-product-page/images/image-product-2-thumbnail.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 10px;
+                    }
+
+                    .third-btn{
+                        background-image: url(/e-commerce-product-page/images/image-product-3-thumbnail.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 10px;
+                    }
+
+                    .fourth-btn{
+                        background-image: url(/e-commerce-product-page/images/image-product-4-thumbnail.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 10px;
                     }
                 }
 
@@ -503,6 +549,7 @@
         button{
             border: none;
             background-color: transparent;
+            cursor: pointer;
         }
     }
 
@@ -525,13 +572,16 @@
             border-radius: 10px;
             margin: 0 2rem;
             padding: 1.25rem 0rem;
+            cursor: pointer;
+            box-shadow: 0px 5px 10px c.$Orange;
+            
+
 
             p{
                 margin: 0 1rem;
                 color: white;
                 font-weight: 700;
                 font-size: 16px;
-                box-shadow: 0px 5px 10px c.$Orange;
             }
 
         }
