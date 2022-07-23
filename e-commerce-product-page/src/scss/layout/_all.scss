@@ -11,7 +11,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100vw;
-        padding: 1rem 0;
+        padding: 1.25rem 0;
 
         @include c.breakpoints(desktop) {
             display: flex;
@@ -62,15 +62,16 @@
 
         .start{
             width: 50%;
-            
+            justify-content: space-around;
+            margin-left: 0.5rem;
              >img:last-child{
                width: 30%;
-               margin-top: -0.5rem;
            }
            
              button{
                background-color: transparent;
                border: none;
+               margin-top: .5rem;
                @include c.breakpoints(desktop) {
                 display: none;
            }
@@ -129,7 +130,7 @@
         right: 0rem;
         width: 350px;
         background-color: white;
-        z-index: 2;
+        z-index: 3;
         border-radius: 10px;
         box-shadow: 0 8px 10px 10px rgba($color: #000000, $alpha: 0.1);
         transform: translateY(-10px);
@@ -205,6 +206,7 @@
                 .delete{
                     border: none;
                     background-color: transparent;
+                    cursor: pointer;
 
                     img{
                       width: 100%;   
@@ -247,7 +249,7 @@
         flex-direction: column;
         padding: 5rem 10rem 0 2.5rem;
         background-color: white;
-        z-index: 2;
+        z-index: 4;
         transform: translateX(-100%);
         transition: all .7s ease-in-out;
         @include c.breakpoints(desktop) {
@@ -263,7 +265,7 @@
 
             img{
                 position: absolute;
-                top: 1.25rem;
+                top: 1.75rem;
                 left: 2.25rem;
             }
         } 
@@ -403,6 +405,7 @@
                 width: 100%;
                 height: 100%;
                 transition: all 0.5s;
+                z-index: -1;
 
                 img{
                     width: 100%;
@@ -425,8 +428,12 @@
                 width: 30px;
                 height: 30px;
                 padding: 0 .7rem;
-                z-index: 1;
+                z-index: 3; 
 
+                &:active{
+                    transform: scale(1.1);
+
+                }
 
                 img{
                     width: 10px;

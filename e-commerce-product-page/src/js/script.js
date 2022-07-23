@@ -34,8 +34,12 @@ function toggleCart(){
     const toggle = cartToggle.getAttribute('data-toggle');
     if(toggle == 'true'){
         cartToggle.setAttribute('data-toggle', false);
+        next.style.display="block";
+        previous.style.display="block";
     } else{
         cartToggle.setAttribute('data-toggle', true);
+        next.style.display="none";
+        previous.style.display="none";
     }   
 }
 
@@ -136,7 +140,7 @@ function incrementCart() {
     }
 
     multiply.textContent = count;
-    output.textContent = count * 125;
+    output.textContent = `$${count * 125}`;
 
 
     if(count == 0 ){
