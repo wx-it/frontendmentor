@@ -13,6 +13,16 @@
         width: 100vw;
         padding: 1.25rem 0;
 
+        @include c.breakpoints(tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            padding: 0;
+            border-bottom: 1px c.$Grayish-blue solid;
+        }
+
+
         @include c.breakpoints(desktop) {
             display: flex;
             align-items: center;
@@ -26,6 +36,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+
         @include c.breakpoints(desktop) {
             display: flex;
             align-items: center;
@@ -36,7 +47,28 @@
 
         .links{
             display: none;
+            @include c.breakpoints(tablet){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60%;
+                margin: 0 1rem;
 
+                a{
+                    text-decoration: none;
+                    margin: 0 0.5rem;
+                    color: c.$Dark-grayish-blue;
+                    padding: 37px 0;
+                    height: 100%;
+                    transition: all .15s ease;
+                    border-bottom: 3px solid hsl(0, 0%, 100%);
+                    
+                    &:hover{
+                        color: black;
+                          border-bottom: 3px solid hsl(26, 100%, 55%);
+                    }
+                }
+            }
             @include c.breakpoints(desktop) {
                 display: flex;
                 justify-content: center;
@@ -64,6 +96,11 @@
             width: 50%;
             justify-content: space-around;
             margin-left: 0.5rem;
+            @include c.breakpoints(tablet) {
+                justify-content: space-between;
+            }
+
+
              >img:last-child{
                width: 30%;
            }
@@ -75,6 +112,9 @@
                @include c.breakpoints(desktop) {
                 display: none;
            }
+           @include c.breakpoints(tablet){
+            display: none;
+        }
                
            }
            
@@ -110,10 +150,12 @@
                 width: 20%;
                @include c.breakpoints(desktop) {
                 width: 40%;
+                border: 2px solid hsl(0, 0%, 100%);
+                border-radius: 50%;
+                transition: all .15s ease;
                 cursor: pointer;
                 &:hover{
                     border: 2px c.$Orange solid;
-                    border-radius: 50%;
                 }
                }
             }
@@ -255,6 +297,9 @@
         @include c.breakpoints(desktop) {
              display: none;
         }
+        @include c.breakpoints(tablet){
+            display: none;
+        }
 
         button{
             border: none;
@@ -291,6 +336,10 @@
             align-items: center;
             width: 100%;
             height: 100vh;
+        }
+
+        @include c.breakpoints(tablet){
+            flex-wrap: wrap;
         }
 
         .main-content{
@@ -394,6 +443,11 @@
         height: 400px;
         width: 100vw;
 
+        @include c.breakpoints(tablet){
+            margin: 1rem 0;
+        }
+
+
         
         @include c.breakpoints(desktop) {
             display: none;
@@ -410,7 +464,7 @@
                 img{
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
 
@@ -429,6 +483,7 @@
                 height: 30px;
                 padding: 0 .7rem;
                 z-index: 3; 
+                box-shadow: 1px 1px 10px rgba($color: #000000, $alpha: 0.3);
 
                 &:active{
                     transform: scale(1.1);
@@ -453,6 +508,8 @@
         @include c.breakpoints(desktop) {
             padding: 0;
         }
+
+
         h3{
             color: c.$Orange;
             font-weight: 700;
@@ -486,7 +543,7 @@
     .pricing{
         margin: 0 2rem;
         @include c.breakpoints(desktop) {
-            margin: 0;
+            margin: 1rem 0;
         }
 
         ul{
@@ -522,6 +579,7 @@
                         font-size: 15px;
                         background-color: c.$Pale-orange;
                         padding: 0.25rem 0.5rem;
+                        margin: 0 0.75rem;
                         border-radius: 10px;
                     }
                 }
@@ -532,6 +590,7 @@
                     text-decoration: line-through;
                     font-weight: 700;
                     color: c.$Grayish-blue;
+                    margin: .5rem 0;
                 }
             }
         }

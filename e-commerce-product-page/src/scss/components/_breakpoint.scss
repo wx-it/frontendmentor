@@ -1,9 +1,15 @@
-$breakpoint: (
-    "desktop": 43.75em,
-);
-
-@mixin breakpoints($size) {
-    @media (min-width: map-get($breakpoint, $size)) {
-        @content;
+ // $breakpoint is the variable that can have several values
+ @mixin breakpoints ($breakpoint) { //the name of the mixin is devices
+  
+    @if $breakpoint == tablet {    
+    @media only screen and (min-width: 600px) and (max-width : 1000px) {
+      @content;
     }
+  }
+ 
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1000px) {
+      @content;
+    }
+  }
 }
