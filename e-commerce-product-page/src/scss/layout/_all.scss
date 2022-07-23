@@ -187,6 +187,14 @@
             left: auto;
         }
 
+        @include c.breakpoints(tablet) {
+            position: absolute;
+            margin: 0;
+            right: 2rem;
+            top: 6.5rem;
+            left: auto;
+        }
+
         h3{
             padding: 1rem 1.5rem;
             border-bottom: 1px c.$Grayish-blue solid;
@@ -393,8 +401,11 @@
                         height: 100px;
                         border: none;
                         &:hover, &:focus{
-                            border: 2px c.$Orange solid;
                             opacity: 70%;   
+                        }
+                        
+                        &:focus{
+                            border: 2px c.$Orange solid;
                         }
                         img{
                             width: 100px;
@@ -628,6 +639,18 @@
             border: none;
             background-color: transparent;
             cursor: pointer;
+            transition: all .15s ease;
+            @include c.breakpoints(desktop) {
+
+            &:last-child{
+                margin-top: 0.25rem;
+            }
+
+            &:hover{
+                opacity: 70%;
+              }
+
+            }
         }
     }
 
@@ -652,7 +675,10 @@
             padding: 1.25rem 0rem;
             cursor: pointer;
             box-shadow: 0px 5px 10px c.$Orange;
-            
+            transition: all .15s ease;
+          &:hover{
+            opacity: 70%;
+          }
 
 
             p{
