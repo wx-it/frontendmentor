@@ -44,18 +44,41 @@ cartBtn.addEventListener('click', toggleCart)
 //images slide
 const previous = document.getElementById('previous');
 const next = document.getElementById('next');
-const products = document.querySelector('#img-display');
+const products = document.querySelectorAll('#img-display');
 //console.log(products)
+
+let slide = 0;
+
+let lastSlide = products.length - 1;
+
+products.forEach((img, indx)=>{
+    img.style.transform=`translateX(${100 * (indx - slide)}%)`;
+})
+
 function nextImage() {
-        products.classList.add('animation');
+    if (slide === lastSlide) {
+      slide = 0;
+    } else {
+      slide++;
+    }
+    products.forEach((img, indx)=>{
+        img.style.transform=`translateX(${100 * (indx - slide)}%)`;
+  })
+
 }
 next.addEventListener('click', nextImage)
 
 
 
 function prevImage() {
-    products.forEach((img)=>{
-        img.style.transform='translatex(-100%)';
+    if (slide === 0) {
+        slide = lastSlide;
+      } else {
+        slide--;
+      }
+    
+    products.forEach((img, indx)=>{
+        img.style.transform=`translateX(${100 * (indx - slide)}%)`;
   })
 }
 previous.addEventListener('click', prevImage)

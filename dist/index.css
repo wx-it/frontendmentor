@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -97,7 +98,7 @@
 .container__navbar .end button .number {
   display: block;
   position: absolute;
-  top: -1.25rem;
+  top: -0.65rem;
   right: -0.75rem;
   padding: 0.1rem 0.65rem;
   border-radius: 30px;
@@ -339,15 +340,12 @@
   background-size: cover;
   border-radius: 10px;
 }
-.container .animation {
-  -webkit-animation: slide 3s;
-          animation: slide 3s;
-}
 .container .images {
   position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  height: 400px;
   width: 100vw;
 }
 @media (min-width: 43.75em) {
@@ -355,32 +353,25 @@
     display: none;
   }
 }
-@-webkit-keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+.container .images #img-display {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.container .images .product {
-  width: 100vw;
+.container .images #img-display img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container .images__buttons {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 0rem;
+  margin: 0rem 1rem;
 }
 .container .images__buttons button {
   background-color: white;
